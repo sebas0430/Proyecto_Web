@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Inicio - Wiki Patriarcado</title>
+</head>
+
+<body>
+
+    <!-- Use the layout -->
+    <div th:replace="~{layouts/main :: main_layout(~{::content})}">
+        <div th:fragment="content">
+            <h2>Bienvenido a la Wiki Técnica</h2>
+            <p>Esta aplicación es una demostración de arquitectura Server-Side utilizando <strong>Java Spring
+                    Boot</strong> y <strong>Thymeleaf</strong>.</p>
+
+            <div class="info-box" style="background:#e8f4f8; padding:20px; border-radius:5px; margin-top:20px;">
+                <h3>Objetivos del Proyecto</h3>
+                <ul>
+                    <li>Implementar arquitectura MVC rigurosa.</li>
+                    <li>Demostrar renderizado dinámico de vistas.</li>
+                    <li>Aplicar validaciones robustas en el frontend (JavaScript).</li>
+                    <li>Estructurar código limpio y mantenible.</li>
+                </ul>
+            </div>
+
+            <p style="margin-top:20px;">
+                Selecciona un tema del menú lateral para comenzar a navegar por la documentación.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

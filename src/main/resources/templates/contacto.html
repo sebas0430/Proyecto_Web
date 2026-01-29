@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Contáctenos - Wiki Patriarcado</title>
+</head>
+
+<body>
+
+    <div th:replace="~{layouts/main :: main_layout(~{::content})}">
+        <div th:fragment="content">
+            <h2>Formulario de Contacto</h2>
+            <p>Utilice este formulario para enviar sus dudas o sugerencias al equipo "Patriarcado".</p>
+
+            <!-- Success Message (Backend feedback) -->
+            <div th:if="${mensajeExito}" class="success-box">
+                <i class="fas fa-check-circle"></i> <span th:text="${mensajeExito}">Envío existoso</span>
+            </div>
+
+            <form id="contactForm" th:action="@{/contacto}" th:object="${contacto}" method="post"
+                style="margin-top:20px;">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" th:field="*{nombre}" placeholder="Ej: Juan Pérez">
+                    <div class="error-message">Error en el nombre</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="text" id="email" th:field="*{email}" placeholder="Ej: juan@example.com">
+                    <div class="error-message">Error en el correo</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="text" id="telefono" th:field="*{telefono}" placeholder="Ej: 3001234567">
+                    <div class="error-message">Error en el teléfono</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto / Motivo *</label>
+                    <select id="asunto" th:field="*{asunto}">
+                        <option value="">Seleccione una opción</option>
+                        <option value="Soporte Técnico">Soporte Técnico</option>
+                        <option value="Sugerencia de Contenido">Sugerencia de Contenido</option>
+                        <option value="Reporte de Error">Reporte de Error</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <div class="error-message">Seleccione un asunto</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" th:field="*{mensaje}" rows="5"
+                        placeholder="Escriba su mensaje aquí (20-400 caracteres)..."></textarea>
+                    <div id="mensaje-counter" class="char-counter">Caracteres restantes: 400</div>
+                    <div class="error-message">Error en el mensaje</div>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
