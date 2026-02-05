@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Contáctenos - Wiki Patriarcado</title>
+    <title>Contáctenos - Wiki Los Aventureros</title>
 </head>
 
 <body>
@@ -10,15 +10,14 @@
     <div th:replace="~{layouts/main :: main_layout(~{::content})}">
         <div th:fragment="content">
             <h2>Formulario de Contacto</h2>
-            <p>Utilice este formulario para enviar sus dudas o sugerencias al equipo "Patriarcado".</p>
+            <p>Utilice este formulario para enviar sus dudas o sugerencias al equipo "Los Aventureros".</p>
 
             <!-- Success Message (Backend feedback) -->
             <div th:if="${mensajeExito}" class="success-box">
                 <i class="fas fa-check-circle"></i> <span th:text="${mensajeExito}">Envío existoso</span>
             </div>
 
-            <form id="contactForm" th:action="@{/contacto}" th:object="${contacto}" method="post"
-                style="margin-top:20px;">
+            <form id="contactForm" th:action="@{/contacto}" th:object="${contacto}" method="post" class="mt-20">
 
                 <div class="form-group">
                     <label for="nombre">Nombre Completo *</label>

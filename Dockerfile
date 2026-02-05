@@ -13,5 +13,5 @@ EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
 # Comandos de uso:
-# docker build -t wiki-app .
-# docker run -p 8080:8080 wiki-app
+# docker build -t wiki-aventureros .
+# docker run -p 8080:8080 wiki-aventureros

@@ -9,15 +9,15 @@
 
     <div th:replace="~{layouts/main :: main_layout(~{::content})}">
         <div th:fragment="content">
-            <h2 th:text="${pagina.titulo}" style="color: #2980b9; border-bottom: 2px solid #eee; padding-bottom: 10px;">
+            <h2 th:text="${pagina.titulo}" class="wiki-page-title">
                 Titulo</h2>
 
-            <div class="wiki-content" style="background: #fff; padding: 20px; border-radius: 5px; margin-top: 20px;">
+            <div class="wiki-content wiki-content-box">
                 <p th:text="${pagina.contenido}">Contenido de la página...</p>
             </div>
 
-            <div style="margin-top: 30px;">
-                <a th:href="@{/}" class="btn" style="color: #666; text-decoration: underline;">&larr; Volver al
+            <div class="back-btn-container">
+                <a th:href="@{/}" class="btn back-btn">&larr; Volver al
                     Inicio</a>
             </div>
         </div>
