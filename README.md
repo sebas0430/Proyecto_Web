@@ -32,4 +32,4 @@ Para cumplir con los requisitos de despliegue, la aplicación debe ejecutarse ut
 - **Validación**: JavaScript (Formulario de contacto).
 
 ## Integrantes
-Grupo 6 - Los Aventureros
+Los Aventureros
