@@ -1,19 +1,20 @@
 package com.grupo6.wiki.controllers;
 
-import com.grupo6.wiki.model.PaginaWiki;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import com.grupo6.wiki.model.PaginaWiki;
 
 @Controller
 public class WikiController {
 
-    private List<PaginaWiki> wikiPages = new ArrayList<>();
+    private final List<PaginaWiki> wikiPages = new ArrayList<>();
 
     public WikiController() {
         // Inicializar datos simulados
@@ -31,6 +32,12 @@ public class WikiController {
     public String index(Model model) {
         model.addAttribute("temas", wikiPages); // Para el sidebar en la home también
         return "index";
+    }
+
+    @GetMapping("/about")
+    public String about(Model model) {
+        model.addAttribute("temas", wikiPages);
+        return "about";
     }
 
     @GetMapping("/wiki/{id}")

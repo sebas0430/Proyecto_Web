@@ -59,7 +59,8 @@ body {
     flex: 1;
     padding: 40px;
     background-color: #fff;
-    max-width: 800px; /* Readability */
+    max-width: 800px;
+    /* Readability */
 }
 
 /* Header (Top Bar if needed, but styling simpler) */
@@ -105,19 +106,20 @@ footer {
     margin-bottom: 5px;
 }
 
-.form-group input, 
-.form-group select, 
+.form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Important for padding */
+    box-sizing: border-box;
+    /* Important for padding */
     font-size: 1rem;
 }
 
-.form-group input.error, 
-.form-group select.error, 
+.form-group input.error,
+.form-group select.error,
 .form-group textarea.error {
     border-color: #e74c3c;
     background-color: #fdf0ef;
@@ -127,7 +129,8 @@ footer {
     color: #e74c3c;
     font-size: 0.85rem;
     margin-top: 5px;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
 }
 
 button[type="submit"] {
@@ -185,5 +188,50 @@ button[type="submit"]:hover {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Utility Classes */
+.info-box {
+    background: #e8f4f8;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.wiki-page-title {
+    color: #2980b9;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.wiki-content-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.back-btn-container {
+    margin-top: 30px;
+}
+
+.back-btn {
+    color: #666;
+    text-decoration: underline;
+}
+
+.member-icon {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.team-footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
 }
