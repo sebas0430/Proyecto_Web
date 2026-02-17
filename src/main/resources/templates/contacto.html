@@ -17,17 +17,18 @@
                 <i class="fas fa-check-circle"></i> <span th:text="${mensajeExito}">Envío existoso</span>
             </div>
 
-            <form id="contactForm" th:action="@{/contacto}" th:object="${contacto}" method="post" class="mt-20">
+            <form id="contactForm" th:action="@{/contacto}" th:object="${contact}" method="post" class="mt-20">
 
                 <div class="form-group">
-                    <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" th:field="*{nombre}" placeholder="Ej: Juan Pérez">
+                    <label for="nombreCompleto">Nombre Completo *</label>
+                    <input type="text" id="nombreCompleto" th:field="*{nombreCompleto}" placeholder="Ej: Juan Pérez">
                     <div class="error-message">Error en el nombre</div>
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Correo Electrónico *</label>
-                    <input type="text" id="email" th:field="*{email}" placeholder="Ej: juan@example.com">
+                    <label for="correoElectronico">Correo Electrónico *</label>
+                    <input type="text" id="correoElectronico" th:field="*{correoElectronico}"
+                        placeholder="Ej: juan@example.com">
                     <div class="error-message">Error en el correo</div>
                 </div>
 
